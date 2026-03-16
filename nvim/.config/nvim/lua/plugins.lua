@@ -48,6 +48,7 @@ require("lualine").setup({})
 local parsers = {
 	"lua",
 	"c",
+	"python",
 }
 
 require("nvim-treesitter").install(parsers)
@@ -69,6 +70,7 @@ local servers = {
 	"lua_ls",
 	"stylua",
 	"clangd",
+	"pyright",
 }
 
 require("mason").setup()
