@@ -49,6 +49,11 @@ local parsers = {
 	"lua",
 	"c",
 	"python",
+	"javascript",
+	"typescript",
+	"html",
+	"css",
+	"jsdoc",
 }
 
 require("nvim-treesitter").install(parsers)
@@ -71,6 +76,9 @@ local servers = {
 	"stylua",
 	"clangd",
 	"pyright",
+	"vtsls",
+	"html",
+	"cssls",
 }
 
 require("mason").setup()
@@ -118,8 +126,15 @@ require("conform").setup({
 	formatters_by_ft = {
 		lua = { "stylua" },
 		c = { "clang-format" },
+		python = { "black" },
+		javascript = { "prettierd" },
+		typescript = { "prettierd" },
+		html = { "prettierd" },
+		css = { "prettierd" },
 	},
 })
+
+require("mason-conform").setup({})
 
 --- =======================================================
 --- Autopairs
