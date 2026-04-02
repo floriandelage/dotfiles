@@ -54,6 +54,7 @@ local parsers = {
 	"html",
 	"css",
 	"jsdoc",
+	"typst",
 }
 
 require("nvim-treesitter").install(parsers)
@@ -79,6 +80,8 @@ local servers = {
 	"vtsls",
 	"html",
 	"cssls",
+	"ts_ls",
+	"tinymist",
 }
 
 require("mason").setup()
@@ -131,6 +134,7 @@ require("conform").setup({
 		typescript = { "prettierd" },
 		html = { "prettierd" },
 		css = { "prettierd" },
+		typst = { "prettypst " },
 	},
 })
 

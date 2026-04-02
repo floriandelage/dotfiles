@@ -13,6 +13,7 @@ setopt inc_append_history
 alias vim="nvim"
 
 export PATH="$PATH:/opt/nvim/"
+export PATH="$PATH:/opt/typst/"
 export PATH="$HOME/.local/share/nvim/mason/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"

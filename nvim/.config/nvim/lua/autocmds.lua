@@ -18,11 +18,6 @@ vim.api.nvim_create_autocmd("FileType", {
 	command = "wincmd L",
 })
 
--- auto resize splits when the terminal's window is resized
-vim.api.nvim_create_autocmd("VimResized", {
-	command = "wincmd =",
-})
-
 -- no auto continue comments on new line
 vim.api.nvim_create_autocmd("FileType", {
 	group = vim.api.nvim_create_augroup("no_auto_comment", {}),
@@ -63,5 +58,13 @@ vim.api.nvim_create_autocmd("FileType", {
 
 		vim.treesitter.start(buf, language)
 		vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+	end,
+})
+
+-- apply wrap for typst files
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "typst",
+	callback = function()
+		vim.opt_local.wrap = true
 	end,
 })
