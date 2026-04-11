@@ -19,6 +19,7 @@ SAVEHIST=50000
 setopt inc_append_history
 
 alias vim="nvim"
+alias ls="eza"
 
 export PATH="$PATH:/opt/nvim/"
 
