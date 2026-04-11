@@ -27,7 +27,12 @@ vim.pack.add({
 --- Colorscheme
 --- =======================================================
 
-vim.cmd("colorscheme catppuccin-mocha")
+require("catppuccin").setup({
+	flavour = "mocha",
+	transparent_background = true,
+})
+
+vim.cmd.colorscheme("catppuccin-nvim")
 
 --- =======================================================
 --- Git Signs
@@ -134,7 +139,7 @@ require("conform").setup({
 		typescript = { "prettierd" },
 		html = { "prettierd" },
 		css = { "prettierd" },
-		typst = { "prettypst " },
+		typst = { "prettypst" },
 	},
 })
 

@@ -2,6 +2,7 @@ eval "$(starship init zsh)"
 export EDITOR="nvim"
 export SUDO_EDITOR="$EDITOR"
 
+bindkey -e
 bindkey "^[[3~" delete-char
 
 HISTFILE=~/.history
