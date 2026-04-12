@@ -11,8 +11,6 @@ plugins=(
     zsh-syntax-highlighting
 )
 
-bindkey '^I' autosuggest-accept
-
 source $ZSH/oh-my-zsh.sh
 
 HISTFILE=~/.history

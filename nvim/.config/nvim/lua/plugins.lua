@@ -22,6 +22,7 @@ vim.pack.add({
 	{ src = "https://github.com/kylechui/nvim-surround" },
 	{ src = "https://github.com/windwp/nvim-autopairs" },
 	{ src = "https://github.com/chomosuke/typst-preview.nvim" },
+	{ src = "https://github.com/lervag/vimtex" },
 })
 
 --- =======================================================
