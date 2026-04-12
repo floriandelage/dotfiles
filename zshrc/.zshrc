@@ -1,4 +1,5 @@
 eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
 
 export EDITOR="nvim"
 export SUDO_EDITOR="$EDITOR"
@@ -10,6 +11,8 @@ plugins=(
     zsh-syntax-highlighting
 )
 
+bindkey '^I' autosuggest-accept
+
 source $ZSH/oh-my-zsh.sh
 
 HISTFILE=~/.history
@@ -20,6 +23,7 @@ setopt inc_append_history
 
 alias vim="nvim"
 alias ls="eza"
+alias cd="z"
 
 export PATH="$PATH:/opt/nvim/"
 export PATH="$PATH:/opt/typst/"
