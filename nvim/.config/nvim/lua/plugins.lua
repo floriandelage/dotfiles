@@ -157,4 +157,9 @@ require("nvim-autopairs").setup({})
 --- Text Preview
 --- =======================================================
 
+-- LaTeX
+vim.g.vimtex_view_method = "zathura"
+vim.g.vimtex_compiler_method = "latexmk"
+
+-- Typst
 require("typst-preview").setup({})
