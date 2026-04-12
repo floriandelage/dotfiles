@@ -22,6 +22,7 @@ alias vim="nvim"
 alias ls="eza"
 
 export PATH="$PATH:/opt/nvim/"
+export PATH="$PATH:/opt/typst/"
 
 if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
   tmux attach-session -t default || tmux new-session -s default

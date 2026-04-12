@@ -21,6 +21,7 @@ vim.pack.add({
 	{ src = "https://github.com/nvim-telescope/telescope.nvim" },
 	{ src = "https://github.com/kylechui/nvim-surround" },
 	{ src = "https://github.com/windwp/nvim-autopairs" },
+	{ src = "https://github.com/chomosuke/typst-preview.nvim" },
 })
 
 --- =======================================================
@@ -150,3 +151,9 @@ require("mason-conform").setup({})
 --- =======================================================
 
 require("nvim-autopairs").setup({})
+
+--- =======================================================
+--- Text Preview
+--- =======================================================
+
+require("typst-preview").setup({})
