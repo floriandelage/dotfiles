@@ -21,13 +21,20 @@ vim.pack.add({
 	{ src = "https://github.com/nvim-telescope/telescope.nvim" },
 	{ src = "https://github.com/kylechui/nvim-surround" },
 	{ src = "https://github.com/windwp/nvim-autopairs" },
+	{ src = "https://github.com/chomosuke/typst-preview.nvim" },
+	{ src = "https://github.com/lervag/vimtex" },
 })
 
 --- =======================================================
 --- Colorscheme
 --- =======================================================
 
-vim.cmd("colorscheme catppuccin-mocha")
+require("catppuccin").setup({
+	flavour = "mocha",
+	transparent_background = true,
+})
+
+vim.cmd.colorscheme("catppuccin-nvim")
 
 --- =======================================================
 --- Git Signs
@@ -134,7 +141,7 @@ require("conform").setup({
 		typescript = { "prettierd" },
 		html = { "prettierd" },
 		css = { "prettierd" },
-		typst = { "prettypst " },
+		typst = { "prettypst" },
 	},
 })
 
@@ -145,3 +152,14 @@ require("mason-conform").setup({})
 --- =======================================================
 
 require("nvim-autopairs").setup({})
+
+--- =======================================================
+--- Text Preview
+--- =======================================================
+
+-- LaTeX
+vim.g.vimtex_view_method = "zathura"
+vim.g.vimtex_compiler_method = "latexmk"
+
+-- Typst
+require("typst-preview").setup({})
