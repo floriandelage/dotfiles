@@ -141,7 +141,7 @@ require("conform").setup({
 		typescript = { "prettierd" },
 		html = { "prettierd" },
 		css = { "prettierd" },
-		typst = { "prettypst" },
+		typst = { "typstyle" },
 	},
 })
 
