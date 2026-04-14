@@ -58,3 +58,5 @@ new_tmux () {
 
 DISABLE_AUTO_TITLE="true"
 alias tm=new_tmux
+
+bindkey -e
